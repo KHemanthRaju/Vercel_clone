@@ -15,10 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.uploadFile = void 0;
 const aws_sdk_1 = require("aws-sdk");
 const fs_1 = __importDefault(require("fs"));
-const s3 = new aws_sdk_1.S3({
-    accessKeyId: "AKIATVCNZMDNMAH4X4WJ",
-    secretAccessKey: "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",
-});
+
 const uploadFile = (fileName, localFilePath) => __awaiter(void 0, void 0, void 0, function* () {
     console.log("called");
     const fileContent = fs_1.default.readFileSync(localFilePath);
